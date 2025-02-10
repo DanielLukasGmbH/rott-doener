@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de-DE"> <!-- sprache der Seite wird festgelegt-->
+    <head>
+        <meta charset="utf-8"/>
+        <title>Seite </title>  <!-- title Tag-->
+    </head>
+    <body>
+        <h1>Döner in Käfertal</h1>
+        <h1>Ungeordnete Liste</h1>
+        <ul style="list-style-type: circle;">
+            <li>Pizza</li>
+            <li>Spaghetti</li>
+            <li>Döner</li>
+        </ul>
+        <h1>Geordnete Liste</h1>
+        <ol type="A">
+            <li>Pizza</li>
+            <li>Spaghetti</li>
+            <li>Döner</li>
+        </ol>
+
+        <h2 title="Ich bin ein Titel">Das Titel Atribut</h2>  <!-- title atribut-->
+        <p title="Ich bin ein tooltip">Bewege die Maus über diesen Absatz</p>
+
+        <p>
+            <b>Lorem ipsum</b> dolor sit amet 
+            consectetur, <strong>adipisicing elit.</strong> 
+            Veritatis <i>perferendis ipsa</i> 
+            quisquam cum <em>sequi non tenetur </em> 
+            velit <mark>eveniet ratione,</mark> 
+            consectetur <small>nulla doloremque </small> 
+            <sub>deserunt </sub> <sup>explicabo</sup> <del>voluptate</del> 
+            beatae ea <ins>quaerat aliquam?</ins> Cumque.
+        </p>
+
+        <h1>Das Copyrightzeichen</h1>
+        &#169; <br>
+        &copy;
+
+        <h2>HtmL Formulare</h2>
+        <form action="/login.php">
+            <fieldset>
+                Benutzername: <br>
+                <input type="text" name="username" value="Dani">
+                <br>
+                Passwort <br>
+                <input type="password" name="password">
+                <br>
+                <input type="submit" value="Einloggen">
+            </fieldset>
+        </form>
+        <br>
+        <form>
+            <fieldset>
+                <input type="radio" name="geschlecht" value="maenlich">mänlich<br>
+                <input type="radio" name="geschlecht" value="weiblic">weiblich<br>
+                <input type="radio" name="geschlecht" value="ohne-Angebe" checked>will ich nicht sagen<br>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <h2>Email:
+                    <input type="email" name="email">
+                </h2>
+            </fieldset>
+        </form>
+        <form>
+            <fieldset>
+                <h2>Lieblingsfarbe:
+                    <input type="color" name="vavcolor">
+                </h2>
+            </fieldset>
+        </form>
+        <form>
+            <input type="file" name="myFile">
+        </form>
+    </body>
+</html>
