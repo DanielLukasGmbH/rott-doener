@@ -5,9 +5,71 @@
         <title>Rott Döner</title>
     </head>
     <body>
+        <h1>Döner in Käfertal</h1>
         <form action="bestellen.html">
             <button id="bestellen">Jetzt bestellen!</button>
-        </form>
+        </form> <br>
+        <!--
         <button type="button" onclick="window.location.href='bestellen.html'">Bestellen mit JavaScript</button>
+        -->
+        <fieldset>
+            <h2>Speisekarte &#9775</h2>
+            <ol type="I">
+                <li>Döner: 
+                    785 &yen
+                </li>
+                <li>Yufka:
+                    222 &#8378
+                </li>
+                <li>Lahmacun:
+                    702 &#8379
+                </li>
+            </ol>
+            <ul style="list-style-type: none;">
+                <li>Ayran</li>
+                <li>Uludag</li>
+                <li>Powerade</li>
+            </ul>
+        </fieldset>
+
+        <!--<img src="doener.jpg">
+        <img
+        width="100%"
+        height="100%"
+        src="AngeloMerte.avif">
+        -->
+
+        <h2>Formulare</h2>
+        <form action="/login.php">
+            <fieldset>
+                <b>Benutzername:</b> <br>
+                <input type="text" name="username"><br>
+                <b>Email-Adresse:</b> <br>
+                <input type="email" name="email" placeholder="Deine Emailadresse"><br>
+                <b>Passwort:</b> <br>
+                <input type="password" name="password"><br>
+                <b>Lieblingsfarbe:</b> <br>
+                <input type="color" name="color"> <br>
+                <b>Geburtsdatum:</b> <br>
+                <input type="date" name="bday"> <br>
+                <b>Anzahl an Leuten:</b> <br>
+                <input type="number" name="anzahl" min="1" max="4"> <br>
+                <b>Lebenslauf:</b> <br>
+                <input type="file" name="file"> <br> <br>
+                <input type="submit" value="Einloggen"><br>
+            </fieldset> <br>
+
+            <fieldset>
+                <input type="radio" name="geschlecht" value="maennlich">männlich<br>
+                <input type="radio" name="geschlecht" value="weiblich">weiblich<br>
+                <input type="radio" name="geschlecht" value="ohne-Angabe" checked>ohne Angabe<br>
+            </fieldset> <br>
+
+            <fieldset>
+                <input type="checkbox" name="essen" value="doener">Döner<br>
+                <input type="checkbox" name="essen" value="yufka">Yufka<br>
+                <input type="checkbox" name="essen" value="lahmacun">Lahmacun<br>
+            </fieldset>
+        </form>
     </body>
 </html>
