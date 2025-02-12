@@ -5,15 +5,8 @@
         <title>Rott Döner</title>
         <style>
             /* CSS-Code */
-            body{
-                background-color: rgb(246, 246, 228);
-            }
-            form{
-                color:blueviolet;
-                margin:30px;
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            }
-            ol,ul{
+            
+        ol,ul{
                 float:left;
                 color:crimson;
                 margin:10px;
@@ -25,7 +18,6 @@
                 font-style: italic;
             }
             #mitarbeiter{
-                margin-left: 30px;
                 border: black solid 1px;
                 border-collapse: collapse;
                 width: 50%;
@@ -40,6 +32,34 @@
             /*tr:nth-child(even){
                 background-color: #d5d2d29c;
             }*/
+
+            input[type=text], input[type=password], select{
+                width:100%;
+                padding: 10px 15px;
+                margin: 10px 0;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                box-sizing: border-box;
+            }
+            input[type=submit]{
+                width: 100%;
+                background-color: palevioletred;
+                color: white;
+                padding: 12px;
+                margin: 10px 0;
+                border-radius: 4px;
+                border: none;
+                cursor: pointer;
+            }
+            input[type=submit]:hover{
+                background-color: rgb(228,101,142);
+
+            }
+            div{
+                border-radius: 10px;
+                background-color: #f2f2f2;
+                padding: 10px;
+            }
         </style>
     </head>
     <body>
@@ -54,9 +74,8 @@
         <button type="button" onclick="window.location.href='bestellen.html'">Bestellen mit JavaScript</button>
         -->
         <h2 style=
-            "color: rgb(47, 144, 47);
-            margin-left:30px;">Speisekarte &#9775</h2>
-        <fieldset style="margin:30px;">
+            "color: rgb(47, 144, 47);">Speisekarte &#9775</h2>
+        <fieldset>
             <ol type="I">
                 <li>Döner: 
                     785 &yen
@@ -83,17 +102,22 @@
         -->
 
         <h2 style=
-        "color:rgb(47, 144, 47);
-        margin:30px;">Formulare</h2>
-        <form action="/login.php">
-            <fieldset>
-                <b>Benutzername:</b> <br>
-                <input type="text" name="username"><br>
-                <b>Email-Adresse:</b> <br>
-                <input type="email" name="email" placeholder="Deine Emailadresse"><br>
-                <b>Passwort:</b> <br>
-                <input type="password" name="password"><br>
-                <b>Lieblingsfarbe:</b> <br>
+        "color:rgb(47, 144, 47);">Formulare</h2>
+        <div>
+            <form action="/login.php">
+                <label for="uname">Benutzername</label>
+                <input type="text" id="uname" name="username" placeholder="Dein Benutzername...">
+                <label for="password">Passwort</label>
+                <input type="password" id="password" name="password" placeholder="Dein Passwort...">
+                <label for="alter">Wie alt bist du?</label>
+                <select id="alter" name="alter">
+                    <option value="kleiner20">Unter 20</option>
+                    <option value="kleiner30">Unter 30</option>
+                    <option value="groesser30">Über 30</option>
+                </select>
+                <!--<b>Email-Adresse:</b> <br>
+                <input type="email" name="email" placeholder="Deine Emailadresse"><br>---->
+                <!--<b>Lieblingsfarbe:</b> <br>
                 <input type="color" name="color"> <br>
                 <b>Geburtsdatum:</b> <br>
                 <input type="date" name="bday"> <br>
@@ -101,9 +125,11 @@
                 <input type="number" name="anzahl" min="1" max="4"> <br>
                 <b>Lebenslauf:</b> <br>
                 <input type="file" name="file"> <br> <br>
-                <input type="submit" value="Einloggen"><br>
-            </fieldset> <br>
-
+                -->
+                <input type="submit" value="Registrieren">
+            </form>    
+        </div>
+        <form>
             <fieldset>
                 <input type="radio" name="geschlecht" value="maennlich">männlich<br>
                 <input type="radio" name="geschlecht" value="weiblich">weiblich<br>
@@ -116,27 +142,23 @@
                 <input type="checkbox" name="essen" value="lahmacun">Lahmacun<br>
             </fieldset>
         </form>
-
-        <div>
-            <h2 style="color:rgb(47, 144, 47);
-            margin:30px;">Mitarbeiter</h2>
-            <table id="mitarbeiter">
-                <tr>
-                    <th>Vorname</th>
-                    <th>Nachname</th>
-                    <th>Bewertung</th>
-                </tr>
-                <tr>
-                    <td>Daniel</td>
-                    <td>Zdravkovic</td>
-                    <td>10/10</td>
-                </tr>
-                <tr>
-                    <td>Lukas</td>
-                    <td>Kirgios</td>
-                    <td>-1/10</td>
-                </tr>
-            </table>
-        </div>
+            <h2 style="color:rgb(47, 144, 47);">Mitarbeiter</h2>
+        <table id="mitarbeiter">
+            <tr>
+                <th>Vorname</th>
+                <th>Nachname</th>
+                <th>Bewertung</th>
+            </tr>
+            <tr>
+                <td>Daniel</td>
+                <td>Zdravkovic</td>
+                <td>10/10</td>
+            </tr>
+            <tr>
+                <td>Lukas</td>
+                <td>Kirgios</td>
+                <td>-1/10</td>
+            </tr>
+        </table>
     </body>
 </html>
