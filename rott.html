@@ -4,106 +4,145 @@
         <meta charset="utf-8"/>
         <title>Rott Döner</title>
         <style>
-            /* CSS-Code */
-            
-        ol,ul{
-                float:left;
-                color:crimson;
-                margin:10px;
-                padding: 5px;
-                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            ol, ul {
+                list-style: none;
+                padding: 0;
+                width: 100%;
+                text-align: center;
+                font-family: Calibri, sans-serif;
             }
-            h1, h2{
-                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                margin: 10px 0;
+                font-size: 1.2em;
+            }
+            li::before, li::after {
+                content: "";
+                flex: 1;
+                height: 2px;
+                background-color: black;
+                margin: 0 10px;
+            }
+            h1, h2 {
+                text-align: center;
+                font-family: Verdana, sans-serif;
                 font-style: italic;
+                color: cadetblue;
             }
-            #mitarbeiter{
-                border: black solid 1px;
-                border-collapse: collapse;
-                width: 50%;
+            .container {
+                display: flex;
+                gap: 10px;
+                width: 100%;
             }
-            #mitarbeiter th,td{
+            .options-container {
+                margin-top: 10px;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                display: flex;
+                gap: 10px;
+            }
+            fieldset {
+                width: 150px;
+            }
+            .table-container {
+                margin-top: 16px;
                 text-align: left;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                flex: 1;
             }
-            #mitarbeiter th{
-                background-color: rgb(101, 99, 99);
+            table {
+                width: 100%;
+                border-collapse: collapse;
+            }
+            th, td {
+                border: 1px solid black;
+                padding: 5px;
+            }
+            th {
+                background-color: rgb(99, 98, 98);
                 color: white;
             }
-            /*tr:nth-child(even){
-                background-color: #d5d2d29c;
-            }*/
-
-            input[type=text], input[type=password], select{
-                width:100%;
-                padding: 10px 15px;
+            input[type=text], input[type=password], select, input[type=submit] {
+                width: 100%;
+                padding: 10px;
                 margin: 10px 0;
                 border: 1px solid #ccc;
                 border-radius: 3px;
-                box-sizing: border-box;
             }
-            input[type=submit]{
-                width: 100%;
+            input[type=submit] {
                 background-color: palevioletred;
+                border: transparent double 2px;
                 color: white;
-                padding: 12px;
-                margin: 10px 0;
-                border-radius: 4px;
-                border: none;
                 cursor: pointer;
+                box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.5);
+                transition: all 0.3s ease-in-out;
             }
-            input[type=submit]:hover{
-                background-color: rgb(228,101,142);
-
+            input[type=submit]:hover {
+                background-color: rgb(234, 71, 122);
+                border: white double 2px;
+                border-radius: 10px;
+                transform: scale(1, 1.1)
             }
-            div{
+            legend {
+                font-weight: bold;
+            }
+            .Speisekarte {
+                display: flex;
+                align-items: center;
+                width: 100%;
+            }
+            .Speisekarte::before, .Speisekarte::after {
+                content: "";
+                height: 2px;
+                background-color: black;
+            }
+            #formular {
+                font-family: Verdana, sans-serif;
                 border-radius: 10px;
                 background-color: #f2f2f2;
                 padding: 10px;
             }
+            .order-button {
+                background-color:palevioletred; /* Schöne auffällige Farbe */
+                color: white;
+                font-size: 15px;
+                padding: 12px 24px;
+                border: none;
+                border-radius: 8px; /* Abgerundete Ecken */
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+                box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.6);
+            }
+            .order-button:hover {
+                background-color: rgb(234, 71, 122);
+                transform: scale(1.05); /* Leichter Hover-Effekt */
+            }
         </style>
     </head>
     <body>
-        <h1 style=
-        "color:cadetblue;
-        margin-left:200px;
-        margin-top:50px;">Döner in Käfertal</h1>
+        <h1>Döner in Käfertal</h1>
+        <h2>Speisekarte &#9775</h2>
         <form action="bestellen.html">
-            <button id="bestellen">Jetzt bestellen!</button>
+            <button class="order-button">Jetzt bestellen</button>
         </form>
-        <!--
-        <button type="button" onclick="window.location.href='bestellen.html'">Bestellen mit JavaScript</button>
-        -->
-        <h2 style=
-            "color: cadetblue;">Speisekarte &#9775</h2>
-        <fieldset>
-            <ol type="I">
-                <li>Döner: 
-                    785 &yen
-                </li>
-                <li>Yufka:
-                    222 &#8378
-                </li>
-                <li>Lahmacun:
-                    702 &#8379
-                </li>
+        <div class="Speisekarte">
+            <ol>
+                <li>Döner: 785 &yen</li>
+                <li>Yufka: 222 &#8378</li>
+                <li>Lahmacun: 702 &#8379</li>
             </ol>
-            <ul style="list-style-type:circle;">
+        </div>
+        <div class="Speisekarte">
+            <ul>
                 <li>Ayran</li>
                 <li>Uludag</li>
                 <li>Powerade</li>
             </ul>
-        </fieldset>
-
-        <!--<img src="doener.jpg">
-        <img
-        width="100%"
-        height="100%"
-        src="AngeloMerte.avif">
-        -->
-
-        <h2 style=
-        "color:cadetblue;">Formulare</h2>
-        <div>
+        </div>
+        <h2>Formulare</h2>
+        <div id="formular">
             <form action="/login.php">
                 <label for="uname">Benutzername</label>
                 <input type="text" id="uname" name="username" placeholder="Dein Benutzername...">
@@ -115,50 +154,47 @@
                     <option value="kleiner30">Unter 30</option>
                     <option value="groesser30">Über 30</option>
                 </select>
-                <!--<b>Email-Adresse:</b> <br>
-                <input type="email" name="email" placeholder="Deine Emailadresse"><br>---->
-                <!--<b>Lieblingsfarbe:</b> <br>
-                <input type="color" name="color"> <br>
-                <b>Geburtsdatum:</b> <br>
-                <input type="date" name="bday"> <br>
-                <b>Anzahl an Leuten:</b> <br>
-                <input type="number" name="anzahl" min="1" max="4"> <br>
-                <b>Lebenslauf:</b> <br>
-                <input type="file" name="file"> <br> <br>
-                -->
                 <input type="submit" value="Registrieren">
-            </form>    
+            </form>
         </div>
-        <form>
-            <fieldset>
-                <input type="radio" name="geschlecht" value="maennlich">männlich<br>
-                <input type="radio" name="geschlecht" value="weiblich">weiblich<br>
-                <input type="radio" name="geschlecht" value="ohne-Angabe" checked>ohne Angabe<br>
-            </fieldset> <br>
-
-            <fieldset>
-                <input type="checkbox" name="essen" value="doener">Döner<br>
-                <input type="checkbox" name="essen" value="yufka">Yufka<br>
-                <input type="checkbox" name="essen" value="lahmacun">Lahmacun<br>
-            </fieldset>
-        </form>
-            <h2 style="color:cadetblue;">Mitarbeiter</h2>
-        <table id="mitarbeiter">
-            <tr>
-                <th>Vorname</th>
-                <th>Nachname</th>
-                <th>Bewertung</th>
-            </tr>
-            <tr>
-                <td>Daniel</td>
-                <td>Zdravkovic</td>
-                <td>10/10</td>
-            </tr>
-            <tr>
-                <td>Lukas</td>
-                <td>Kirgios</td>
-                <td>-1/10</td>
-            </tr>
-        </table>
+        <div class="container">
+            <div class="options-container">
+                <fieldset>
+                    <legend>Geschlecht</legend>
+                    <input type="radio" name="gender" value="m"> männlich <br>
+                    <input type="radio" name="gender" value="w"> weiblich <br>
+                    <input type="radio" name="gender" value="o" checked> ohne Angabe
+                </fieldset>
+                <fieldset>
+                    <legend>Speisen</legend>
+                    <input type="checkbox" name="food" value="Döner"> Döner <br>
+                    <input type="checkbox" name="food" value="Yufka"> Yufka <br>
+                    <input type="checkbox" name="food" value="Lahmacun"> Lahmacun
+                </fieldset>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Vorname</th>
+                            <th>Nachname</th>
+                            <th>Bewertung</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Daniel</td>
+                            <td>Zdravkovic</td>
+                            <td>5/5 Sterne</td>
+                        </tr>
+                        <tr>
+                            <td>Lukas</td>
+                            <td>Kirgios</td>
+                            <td>-1/5 Sterne</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </body>
 </html>
