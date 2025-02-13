@@ -1,5 +1,10 @@
-var i = 10;
-do{
-    document.write("<br>" + i + ")");
-    i--;
-}while(i>= 0);
+$("#viereck").click(function(){
+    alert($("#text").text());
+});
+$("#text").click(function(){
+    $("#text").text("Du hast den Text angeklickt");
+});
+
+$("#viereck").hover(function(){
+    $("#viereck").css("width", "50px")
+});
