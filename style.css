@@ -1,0 +1,16 @@
+.link-button{
+    padding: 0.3em 0.4em;
+    border: 0.5px solid#767676;
+    border-radius: 0.15em;
+    background-color: #efefef;
+    color: black;
+    font-size: 0.8rem;
+}
+
+fieldset{
+    width: 100%;
+    background-color: #f60f0f;
+}
+
+
+
